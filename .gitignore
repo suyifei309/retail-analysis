@@ -1,0 +1,14 @@
+# 数据不入库（体积大，可通过脚本重新获取）
+data/raw/*
+data/clean/*
+!data/raw/.gitkeep
+!data/clean/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 系统
+Thumbs.db
+.DS_Store
