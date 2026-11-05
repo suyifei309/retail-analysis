@@ -1,5 +1,7 @@
 # retail-analysis：电商用户价值与流失分析
 
+> **完整分析报告**：[reports/report.md](reports/report.md) —— 3 个业务发现、3 条带 ROI 与 A/B 验证的行动建议
+
 > **业务问题**：这家电商的高价值客户在流失吗？挽留券应该发给谁、发多少？
 > **数据**：UCI [Online Retail II](https://archive.ics.uci.edu/dataset/502/online+retail+ii)（2009–2011，英国线上礼品电商，约 106 万条交易，CC BY 4.0）
 
@@ -25,7 +27,7 @@
 - [x] **W1** 数据下载（xlsx→parquet）+ 清洗，产出清洗规则表（1,067,371 行 → 交易表 1,007,913 + 退货表 19,494）
 - [x] **W2** EDA + RFM 客群分层（5,878 客户，25% 客户贡献 69% GMV；新客同比 -55%；锁定 824 人流失风险客群）
 - [x] **W3** 流失预警建模（时点切割防泄漏）：AUC 0.758 vs 基线 0.682；逻辑回归带 95% CI 追平 XGBoost；20% 预算覆盖 38% 真流失者；产出 churn_scores.parquet 投放名单
-- [ ] **W4** 业务建议（3 发现 × 3 建议）+ A/B 验证方案（样本量计算）+ 最终报告
+- [x] **W4** 业务建议 + ROI 测算 + A/B 实验设计（样本量公式计算：每组 412 人）→ [reports/report.md](reports/report.md)
 
 ## 模型结论（03_model.ipynb）
 
